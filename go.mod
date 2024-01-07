@@ -2,8 +2,6 @@ module github.com/rancher/wrangler/v2
 
 go 1.21
 
-toolchain go1.21.1
-
 replace github.com/rancher/lasso => github.com/krunalhinguu/lasso v1.29.0-rancher1
 
 require (
