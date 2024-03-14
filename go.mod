@@ -2,7 +2,7 @@ module github.com/rancher/wrangler/v2
 
 go 1.21
 
-replace github.com/rancher/lasso => github.com/krunalhinguu/lasso v1.29.0-rancher2
+replace github.com/rancher/lasso => github.com/krunalhinguu/lasso v0.0.0-20240314064442-707f664400c6
 
 require (
 	github.com/evanphx/json-patch v5.6.0+incompatible
