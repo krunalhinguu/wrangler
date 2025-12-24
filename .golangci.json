@@ -1,37 +1,43 @@
 {
+    "version": "2",
     "linters": {
-        "disable-all": true,
+        "default": "none",
         "enable": [
             "ineffassign",
-            "goimports",
             "govet",
             "misspell",
             "revive",
             "unused"
-        ]
-    },
-    "linters-settings": {
-        "govet": {
-            "disable": [
-                "shadow"
-            ]
+        ],
+        "settings": {
+            "govet": {
+                "disable": [
+                    "shadow"
+                ]
+            },
+            "revive": {
+                "rules": [
+                    {
+                        "name": "confusing-naming",
+                        "disabled": true
+                    }
+                ]
+            }
         },
-        "revive": {
-            "rules": [
-                {
-                    "name": "confusing-naming",
-                    "disabled": true
-                }
+        "exclusions": {
+            "paths": [
+                "pkg/generated"
             ]
         }
     },
     "run": {
         "tests": false,
-        "timeout": "10m"
+        "relative-path-mode": "cfg",
+        "concurrency": 0
     },
-    "issues": {
-        "exclude-dirs": [
-            "pkg/generated"
+    "formatters": {
+        "enable": [
+            "goimports"
         ]
     }
 }
